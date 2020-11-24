@@ -1,4 +1,31 @@
+using System;
 using Domain.Models;
+using Xunit;
+
+namespace Flora.Test.Domain
+{
+    public class TestSumArray
+    {
+        public static TheoryData<double[], double> TestData => new TheoryData<double[], double> {
+            {new double[]{},0},
+            {new double[]{1.2,5.4},6.6},
+        };
+
+        [Theory]
+        [MemberData(nameof(TestData))]
+        public void TestMethod(double[] param, double expected)
+        {
+            var actual = Kata.SumArray(param);
+            var simplified = Math.Round(actual, 1);
+            Assert.Equal(simplified, expected);
+        }
+    }
+
+
+
+}
+
+/*using Domain.Models;
 using System;
 using Xunit;
 

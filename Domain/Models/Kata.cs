@@ -6,6 +6,12 @@ namespace Domain.Models
 {
     public class Kata
     {
+        public static double SumArray(double[] array)
+        {
+            return array.Sum();
+        }
+
+
         public static bool Hero(int bullets, int dragons)
         {
             int requiredBulletsCount = dragons * 2;
@@ -70,6 +76,8 @@ namespace Domain.Models
 
             return Math.Pow(array[n], n);
         }
+
+
 
 
     }
