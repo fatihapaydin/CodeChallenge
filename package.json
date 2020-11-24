@@ -1,0 +1,11 @@
+{
+    "name": "codechallenges",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "watch": "cd App && dotnet watch run -c Release",
+        "build": "cd Test && dotnet build",
+        "test": "cd Test && dotnet test"
+    }
+}
